@@ -428,6 +428,7 @@
           const name = form.querySelector('#name').value;
           const subject = form.querySelector('#subject').value;
           const phone = form.querySelector('#number').value;
+          const email = form.querySelector('#email').value;
 
           // Hide form
           form.style.display = 'none';
@@ -436,9 +437,10 @@
           const successMsg = document.createElement('div');
           successMsg.className = 'alert alert-success mt-4';
           successMsg.innerHTML = `
-            <h4 class="mb-2">Thanks you, ${name}!</h4>
+            <h4 class="mb-2">Thank you, ${name}!</h4>
             <p>I have received your message regarding <strong>${subject}</strong>.</p>
-            <p>I will get in touch with you via your phone number: <strong>${phone}</strong> or email.</p>
+            <hr>
+            <p>I will get in touch with you via your phone number: <strong>${phone}</strong> or your email: <strong>${email}</strong>.</p>
           `;
           form.parentNode.appendChild(successMsg);
         })
